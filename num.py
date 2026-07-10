@@ -1,0 +1,27 @@
+import numpy as np
+numbers = list(map(int, input("Enter 9 numbers: ").split()))
+matrix = np.array(numbers).reshape(3, 3)
+
+print("\nMatrix:")
+print(matrix)
+
+average = np.mean(matrix)
+middle = np.median(matrix)
+total = np.sum(matrix)
+minimum = np.min(matrix)
+maximum = np.max(matrix)
+variance = np.var(matrix)
+std_dev = np.std(matrix)
+
+print("\nAverage =", average)
+print("Median =", middle)
+print("Sum =", total)
+print("Minimum =", minimum)
+print("Maximum =", maximum)
+print("Variance =", variance)
+print("Standard Deviation =", std_dev)
+print("Shape =", matrix.shape)
+print("Transpose:\n", matrix.T)
+print("Difference:\n", np.diff(matrix))
+print("Zero Matrix:\n", np.zeros((3, 3)))
+print("Random Matrix:\n", np.random.randint(10, 50, (3, 3)))
